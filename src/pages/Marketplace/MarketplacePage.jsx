@@ -109,7 +109,7 @@ export function MarketplacePage() {
                                             <div className="product-name">{p.name}</div>
                                             <div className="product-seller" style={{ marginBottom: 10 }}>от {seller.name}</div>
                                             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                                                <div className="product-price">{p.price.toLocaleString('ru-RU')} ₽</div>
+                                                <div className="product-price">{p.price.toLocaleString('uz-UZ')} so'm</div>
                                                 <button className="btn btn-primary btn-sm" onClick={e => { e.stopPropagation(); setSelectedProduct(p); }}>Купить</button>
                                             </div>
                                         </div>
@@ -162,7 +162,7 @@ function MyProductsTab({ products, users, onAdd }) {
                                 </div>
                             </td>
                             <td><span className="badge badge-secondary">{p.category}</span></td>
-                            <td><span style={{ color: 'var(--secondary)', fontWeight: 700 }}>{p.price.toLocaleString('ru-RU')} ₽</span></td>
+                            <td><span style={{ color: 'var(--secondary)', fontWeight: 700 }}>{p.price.toLocaleString('uz-UZ')} so'm</span></td>
                             <td><span className={`badge ${getStatusClass(p.status)}`}>{getStatusLabel(p.status)}</span></td>
                             <td>{p.rating > 0 ? `⭐ ${p.rating} (${p.reviews})` : '—'}</td>
                             <td>
@@ -226,7 +226,7 @@ function AddProductModal({ isOpen, onClose }) {
                         </select>
                     </div>
                     <div className="form-group">
-                        <label className="form-label">Цена (₽) *</label>
+                        <label className="form-label">Narx (so'm) *</label>
                         <input className="form-control" type="number" placeholder="1990" min="1" value={form.price} onChange={e => setForm(f => ({ ...f, price: e.target.value }))} />
                     </div>
                 </div>
@@ -269,7 +269,7 @@ function ProductDetailModal({ product, onClose, seller }) {
                 </div>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: 12 }}>
                     <div>
-                        <div className="product-price" style={{ fontSize: '1.8rem', marginBottom: 6 }}>{product.price.toLocaleString('ru-RU')} ₽</div>
+                        <div className="product-price" style={{ fontSize: '1.8rem', marginBottom: 6 }}>{product.price.toLocaleString('uz-UZ')} so'm</div>
                         {product.rating > 0 && (
                             <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
                                 <div className="stars">{'⭐'.repeat(Math.round(product.rating))}</div>
@@ -292,7 +292,7 @@ function ProductDetailModal({ product, onClose, seller }) {
                 <div className="modal-footer">
                     <button className="btn btn-secondary" onClick={onClose}>Закрыть</button>
                     <button className="btn btn-primary" style={{ minWidth: 160 }} onClick={() => setBought(true)}>
-                        🛒 Купить за {product.price.toLocaleString('ru-RU')} ₽
+                        🛒 Sotib olish — {product.price.toLocaleString('uz-UZ')} so'm
                     </button>
                 </div>
             </div>

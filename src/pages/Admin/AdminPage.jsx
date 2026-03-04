@@ -125,7 +125,7 @@ export function AdminPage() {
                                                 <div>
                                                     <div style={{ fontWeight: 700, marginBottom: 4 }}>{p.name}</div>
                                                     <div style={{ fontSize: '0.8rem', color: 'var(--text-muted)', marginBottom: 4 }}>Продавец: {seller.name}</div>
-                                                    <div style={{ fontSize: '0.8rem', color: 'var(--secondary)', fontWeight: 700 }}>{p.price?.toLocaleString('ru-RU')} ₽</div>
+                                                    <div style={{ fontSize: '0.8rem', color: 'var(--secondary)', fontWeight: 700 }}>{p.price?.toLocaleString('uz-UZ')} so'm</div>
                                                 </div>
                                                 <div style={{ display: 'flex', gap: 8 }}>
                                                     <button className="btn btn-success btn-sm" onClick={() => handleModerate(p.id, 'approve')}>✅ Одобрить</button>
@@ -235,7 +235,7 @@ export function AdminPage() {
                                         <tr key={p.id}>
                                             <td style={{ fontWeight: 600 }}>{p.name}</td>
                                             <td style={{ color: 'var(--text-secondary)' }}>{seller.name}</td>
-                                            <td><span style={{ color: 'var(--secondary)', fontWeight: 700 }}>{p.price?.toLocaleString('ru-RU')} ₽</span></td>
+                                            <td><span style={{ color: 'var(--secondary)', fontWeight: 700 }}>{p.price?.toLocaleString('uz-UZ')} so'm</span></td>
                                             <td><span className={`badge ${getStatusClass(p.status)}`}>{getStatusLabel(p.status)}</span></td>
                                             <td>{p.rating > 0 ? `⭐ ${p.rating}` : '—'}</td>
                                             <td>

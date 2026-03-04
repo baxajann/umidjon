@@ -81,32 +81,32 @@ const demoTasks = [
 const demoProducts = [
     {
         id: 'pr1', sellerId: 'u2', name: 'UI Kit Premium', description: 'Коллекция из 500+ UI компонентов для Figma. Современный дизайн, тёмная и светлая темы, полная кастомизация.',
-        category: 'design', price: 2990, image: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=400&q=80',
+        category: 'design', price: 299000, image: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=400&q=80',
         status: 'approved', rating: 4.8, reviews: 124, createdAt: '2026-01-20',
     },
     {
         id: 'pr2', sellerId: 'u2', name: 'React Dashboard Template', description: 'Готовый шаблон админ-панели на React. Адаптивный дизайн, 20+ страниц, интеграции с API.',
-        category: 'development', price: 4500, image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&q=80',
+        category: 'development', price: 450000, image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&q=80',
         status: 'approved', rating: 4.9, reviews: 87, createdAt: '2026-01-25',
     },
     {
         id: 'pr3', sellerId: 'u2', name: 'SEO Starter Pack', description: 'Комплект материалов для базовой SEO-оптимизации: чеклисты, шаблоны технических заданий, инструкции.',
-        category: 'marketing', price: 1490, image: 'https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=400&q=80',
+        category: 'marketing', price: 149000, image: 'https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=400&q=80',
         status: 'approved', rating: 4.5, reviews: 203, createdAt: '2026-02-05',
     },
     {
         id: 'pr4', sellerId: 'u2', name: 'Email Marketing Toolkit', description: 'Набор email-шаблонов для различных ниш, включая onboarding, промо и транзакционные письма.',
-        category: 'marketing', price: 1990, image: 'https://images.unsplash.com/photo-1596526131083-e8c633c948d2?w=400&q=80',
+        category: 'marketing', price: 199000, image: 'https://images.unsplash.com/photo-1596526131083-e8c633c948d2?w=400&q=80',
         status: 'approved', rating: 4.6, reviews: 56, createdAt: '2026-02-10',
     },
     {
         id: 'pr5', sellerId: 'u2', name: 'Brand Identity Kit', description: 'Готовый брендбук с шаблонами для логотипа, визиток, презентаций и соцсетей.',
-        category: 'design', price: 3500, image: 'https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=400&q=80',
+        category: 'design', price: 350000, image: 'https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=400&q=80',
         status: 'pending', rating: 0, reviews: 0, createdAt: '2026-03-01',
     },
     {
         id: 'pr6', sellerId: 'u2', name: 'Node.js API Boilerplate', description: 'Production-ready REST API на Node.js + Express. JWT auth, rate limiting, logging, тесты.',
-        category: 'development', price: 3990, image: 'https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=400&q=80',
+        category: 'development', price: 399000, image: 'https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=400&q=80',
         status: 'pending', rating: 0, reviews: 0, createdAt: '2026-03-02',
     },
 ];
@@ -118,12 +118,14 @@ const demoNotifications = [
     { id: 'n4', userId: 'u1', type: 'task', text: 'Задача «Проектирование архитектуры» выполнена', read: false, createdAt: '2026-02-20T14:00:00' },
 ];
 
+const SEED_VERSION = 'v2-uzs'; // Bump this to force re-seed
+
 export function seedData() {
-    if (localStorage.getItem(STORAGE_KEYS.SEEDED)) return;
+    if (localStorage.getItem(STORAGE_KEYS.SEEDED) === SEED_VERSION) return;
     localStorage.setItem(STORAGE_KEYS.USERS, JSON.stringify(demoUsers));
     localStorage.setItem(STORAGE_KEYS.PROJECTS, JSON.stringify(demoProjects));
     localStorage.setItem(STORAGE_KEYS.TASKS, JSON.stringify(demoTasks));
     localStorage.setItem(STORAGE_KEYS.PRODUCTS, JSON.stringify(demoProducts));
     localStorage.setItem(STORAGE_KEYS.NOTIFICATIONS, JSON.stringify(demoNotifications));
-    localStorage.setItem(STORAGE_KEYS.SEEDED, '1');
+    localStorage.setItem(STORAGE_KEYS.SEEDED, SEED_VERSION);
 }

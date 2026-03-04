@@ -140,7 +140,7 @@ export function ProfilePage() {
                                 <div key={p.id} className="card card-sm">
                                     {p.image && <img src={p.image} alt="" style={{ width: '100%', height: 100, objectFit: 'cover', borderRadius: 'var(--radius-sm)', marginBottom: 10 }} onError={e => e.target.style.display = 'none'} />}
                                     <div style={{ fontWeight: 700, marginBottom: 4 }}>{p.name}</div>
-                                    <div style={{ fontSize: '0.8rem', color: 'var(--secondary)', fontWeight: 700, marginBottom: 8 }}>{p.price?.toLocaleString('ru-RU')} ₽</div>
+                                    <div style={{ fontSize: '0.8rem', color: 'var(--secondary)', fontWeight: 700, marginBottom: 8 }}>{p.price?.toLocaleString('uz-UZ')} so'm</div>
                                     <span className={`badge ${getStatusClass(p.status)}`}>{getStatusLabel(p.status)}</span>
                                 </div>
                             ))}
