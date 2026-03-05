@@ -4,8 +4,7 @@ import App from './App.jsx'
 import './index.css'
 import { seedData } from './utils/mockData.js'
 
-// Force re-seed with UZS prices (clears old seeded flag)
-localStorage.removeItem('pm_seeded')
+// Initialize demo data (version-based auto-reseed)
 seedData()
 
 ReactDOM.createRoot(document.getElementById('root')).render(
