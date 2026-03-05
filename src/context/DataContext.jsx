@@ -9,6 +9,7 @@ export function DataProvider({ children }) {
     const [products, setProductsState] = useState(() => storage.getProducts());
     const [notifications, setNotificationsState] = useState(() => storage.getNotifications());
     const [users] = useState(() => storage.getUsers());
+    const [orders, setOrdersState] = useState(() => storage.getOrders());
 
     const refresh = useCallback(() => {
         setProjectsState(storage.getProjects());
@@ -107,6 +108,31 @@ export function DataProvider({ children }) {
         }
     };
 
+    // --- ORDERS ---
+    const createOrder = (buyerId, product, paymentMethod, cardLast4) => {
+        const all = storage.getOrders();
+        const order = {
+            id: storage.generateId('ord'),
+            buyerId,
+            productId: product.id,
+            productName: product.name,
+            productImage: product.image,
+            productCategory: product.category,
+            sellerId: product.sellerId,
+            price: product.price,
+            paymentMethod,
+            cardLast4: cardLast4 || null,
+            status: 'completed',
+            createdAt: new Date().toISOString(),
+        };
+        const updated = [order, ...all];
+        storage.setOrders(updated);
+        setOrdersState(updated);
+        addNotification(buyerId, 'purchase', `Xarid muvaffaqiyatli! «${product.name}» — ${product.price.toLocaleString('uz-UZ')} so'm`);
+        return order;
+    };
+    const getMyOrders = (userId) => orders.filter(o => o.buyerId === userId);
+
     // --- USERS ---
     const blockUser = (id, blocked) => {
         const all = storage.getUsers().map(u => u.id === id ? { ...u, blocked } : u);
@@ -131,11 +157,12 @@ export function DataProvider({ children }) {
 
     return (
         <DataContext.Provider value={{
-            projects, tasks, products, notifications, users, refresh,
+            projects, tasks, products, notifications, users, orders, refresh,
             createProject, updateProject, deleteProject,
             createTask, updateTask, deleteTask, addComment,
             createProduct, updateProduct, deleteProduct, moderateProduct,
             blockUser, addNotification, markAllRead, markRead,
+            createOrder, getMyOrders,
         }}>
             {children}
         </DataContext.Provider>
