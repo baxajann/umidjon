@@ -109,6 +109,66 @@ const demoProducts = [
         category: 'development', price: 399000, image: 'https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=400&q=80',
         status: 'pending', rating: 0, reviews: 0, createdAt: '2026-03-02',
     },
+    {
+        id: 'pr7', sellerId: 'u2', name: 'Figma Design System Pro', description: 'Полная дизайн-система с токенами, компонентами, иконками и документацией. Подходит для продуктовых команд.',
+        category: 'design', price: 590000, image: 'https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?w=400&q=80',
+        status: 'approved', rating: 4.9, reviews: 312, createdAt: '2026-01-10',
+    },
+    {
+        id: 'pr8', sellerId: 'u2', name: 'Mobile App UI Kit', description: '200+ готовых экранов для iOS и Android. Поддержка тёмной темы, стандарты Material Design и HIG.',
+        category: 'design', price: 480000, image: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&q=80',
+        status: 'approved', rating: 4.7, reviews: 198, createdAt: '2026-01-28',
+    },
+    {
+        id: 'pr9', sellerId: 'u2', name: 'Vue.js Dashboard Template', description: 'Готовый шаблон на Vue 3 + Vite + Pinia. Графики, таблицы, аутентификация, тёмная тема.',
+        category: 'development', price: 420000, image: 'https://images.unsplash.com/photo-1607252650355-f7fd0460ccdb?w=400&q=80',
+        status: 'approved', rating: 4.6, reviews: 143, createdAt: '2026-02-03',
+    },
+    {
+        id: 'pr10', sellerId: 'u2', name: 'Python Flask API Starter', description: 'Стартовый шаблон Flask-приложения с SQLAlchemy, JWT, Swagger-документацией и Docker.',
+        category: 'development', price: 350000, image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=400&q=80',
+        status: 'approved', rating: 4.5, reviews: 89, createdAt: '2026-02-08',
+    },
+    {
+        id: 'pr11', sellerId: 'u2', name: 'Social Media Content Pack', description: '500+ готовых шаблонов для Instagram, Telegram и TikTok. PSD и Figma форматы.',
+        category: 'marketing', price: 220000, image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=400&q=80',
+        status: 'approved', rating: 4.8, reviews: 427, createdAt: '2026-01-18',
+    },
+    {
+        id: 'pr12', sellerId: 'u2', name: 'Google Ads Strategy Guide', description: 'Полное руководство по Google Ads: настройка кампаний, оптимизация, примеры с ROAS 400%+.',
+        category: 'marketing', price: 180000, image: 'https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?w=400&q=80',
+        status: 'approved', rating: 4.4, reviews: 76, createdAt: '2026-02-12',
+    },
+    {
+        id: 'pr13', sellerId: 'u2', name: 'Startup Business Plan Template', description: 'Профессиональный шаблон бизнес-плана для стартапов. Финансовые модели, pitch deck, SWOT.',
+        category: 'consulting', price: 290000, image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&q=80',
+        status: 'approved', rating: 4.6, reviews: 234, createdAt: '2026-01-30',
+    },
+    {
+        id: 'pr14', sellerId: 'u2', name: 'HR Management Toolkit', description: 'Шаблоны для HR-отдела: должностные инструкции, KPI, оценка сотрудников, онбординг.',
+        category: 'consulting', price: 240000, image: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=400&q=80',
+        status: 'approved', rating: 4.3, reviews: 91, createdAt: '2026-02-15',
+    },
+    {
+        id: 'pr15', sellerId: 'u2', name: 'Logo Design Pack — 50 Logos', description: '50 готовых логотипов в стиле минимализм. AI, EPS, SVG форматы. Коммерческая лицензия.',
+        category: 'design', price: 390000, image: 'https://images.unsplash.com/photo-1626785774573-4b799315345d?w=400&q=80',
+        status: 'approved', rating: 4.7, reviews: 167, createdAt: '2026-02-22',
+    },
+    {
+        id: 'pr16', sellerId: 'u2', name: 'eCommerce Notion Dashboard', description: 'Notion-шаблон для интернет-магазина: учёт заказов, товары, аналитика, CRM.',
+        category: 'other', price: 120000, image: 'https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=400&q=80',
+        status: 'approved', rating: 4.5, reviews: 312, createdAt: '2026-02-25',
+    },
+    {
+        id: 'pr17', sellerId: 'u2', name: 'WordPress Theme — SaaSify', description: 'Премиум WordPress тема для SaaS-продуктов. 15 шаблонов страниц, SEO-оптимизирована.',
+        category: 'development', price: 560000, image: 'https://images.unsplash.com/photo-1547658719-da2b51169166?w=400&q=80',
+        status: 'approved', rating: 4.8, reviews: 521, createdAt: '2026-01-12',
+    },
+    {
+        id: 'pr18', sellerId: 'u2', name: 'UX Research Toolkit', description: 'Шаблоны для UX-исследований: пользовательские интервью, usability-тесты, user journey map.',
+        category: 'design', price: 270000, image: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=400&q=80',
+        status: 'pending', rating: 0, reviews: 0, createdAt: '2026-03-04',
+    },
 ];
 
 const demoNotifications = [
@@ -118,7 +178,7 @@ const demoNotifications = [
     { id: 'n4', userId: 'u1', type: 'task', text: 'Задача «Проектирование архитектуры» выполнена', read: false, createdAt: '2026-02-20T14:00:00' },
 ];
 
-const SEED_VERSION = 'v2-uzs'; // Bump this to force re-seed
+const SEED_VERSION = 'v3-themes'; // Bump this to force re-seed
 
 export function seedData() {
     if (localStorage.getItem(STORAGE_KEYS.SEEDED) === SEED_VERSION) return;

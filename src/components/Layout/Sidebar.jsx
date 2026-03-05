@@ -37,13 +37,21 @@ export function Sidebar({ collapsed, onToggle, mobileOpen, onMobileClose }) {
     const otherItems = filtered.filter(i => i.section === 'other');
     const adminItems = filtered.filter(i => i.section === 'admin');
 
+    const BRAND = {
+        admin: { icon: '🛡️', name: 'AdminPanel', cls: 'brand-admin' },
+        seller: { icon: '🛍️', name: 'SellerHub', cls: 'brand-seller' },
+        'project-manager': { icon: '📁', name: 'ProjectHub', cls: 'brand-pm' },
+        user: { icon: '💼', name: 'WorkSpace', cls: 'brand-user' },
+    };
+    const brand = BRAND[currentUser?.role] || { icon: '⚡', name: 'ProManage', cls: '' };
+
     return (
         <>
             {mobileOpen && <div className="sidebar-overlay" onClick={onMobileClose} />}
             <aside className={`sidebar ${collapsed ? 'collapsed' : ''} ${mobileOpen ? 'open' : ''}`}>
-                <div className="sidebar-logo">
-                    <div className="logo-icon">⚡</div>
-                    <span className="logo-text text-gradient">ProManage</span>
+                <div className={`sidebar-logo ${brand.cls}`}>
+                    <div className="logo-icon">{brand.icon}</div>
+                    <span className="logo-text text-gradient">{brand.name}</span>
                     <button
                         className="btn btn-ghost btn-icon"
                         onClick={onToggle}
