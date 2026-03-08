@@ -128,7 +128,7 @@ export function DataProvider({ children }) {
         const updated = [order, ...all];
         storage.setOrders(updated);
         setOrdersState(updated);
-        addNotification(buyerId, 'purchase', `Xarid muvaffaqiyatli! «${product.name}» — ${product.price.toLocaleString('uz-UZ')} so'm`);
+        addNotification(buyerId, 'purchase', `Покупка успешна! «${product.name}» — ${product.price.toLocaleString('ru-RU')} so'm`);
         return order;
     };
     const getMyOrders = (userId) => orders.filter(o => o.buyerId === userId);
