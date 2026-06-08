@@ -7,7 +7,7 @@ import { Modal } from '../../components/UI/Modal.jsx';
 const CATEGORIES = ['all', 'design', 'development', 'marketing', 'consulting', 'other'];
 const CATEGORY_LABELS = {
     all: 'Все', design: '🎨 Дизайн', development: '💻 Разработка',
-    marketing: '📣 Маркетинг', consulting: '💼 Консалтинг', other: '📦 Другое'
+    marketing: '📣 Маркетинг', consulting: '💼 Консалтинг', account: '💻 Бугалтерия', other: '📦 Другое'
 };
 const PAYMENT_METHODS = [
     { id: 'uzumbank', label: 'Uzum Bank', icon: '💜', color: '#7c3aed', desc: 'Карта Uzum Bank' },
